@@ -11,7 +11,7 @@ import pandas as pd
 #Starting time
 start_time = time.time()
 
-#dest_dir = r"C:\Users\S00492308\Desktop" # Save in desktop
+#dest_dir = r"C:\Users\XXXXXX\Desktop" # Save in desktop
 dest_dir = os.path.normpath(os.path.expanduser("~/Desktop"))
 options = Options() #object of ChromeOptions
 options.add_experimental_option("prefs", {
@@ -24,7 +24,7 @@ options.add_experimental_option("prefs", {
 driver = webdriver.Chrome(chrome_options=options)
 
 #import the yaml file
-conf = yaml.full_load(open(r'D:\Python\New FILES\WebLog\configOWS.yml')) 
+conf = yaml.full_load(open(r'D:\Python\New FILES\XXXXXX\XXXXXX.yml')) 
 myOWSUser = conf['OWSurer']['username']
 myOWSPassword = conf['OWSurer']['password']
 OWSurl = conf['OWSurer']['url']
@@ -48,12 +48,12 @@ driver.implicitly_wait(3)
 
 # LOOP
 # reading the spreadsheet for cells list
-recibidoZonaExcel = pd.read_excel('D:/Python/New FILES/Filtros/RecibidoZonaList.xlsx')
+recibidoZonaExcel = pd.read_excel('D:/Python/New FILES/XXXXXX/XXXXXX.xlsx')
 #noStockType = "COMPRADO" # Final status in OWS: CERRADO
 # getting the references and the cells
 cells = recibidoZonaExcel['ref_interna_item']
 cellsSituatuion = recibidoZonaExcel['New Situation'] 
-linktest = "https://1041-frapp.teleows.com/app/spl/spms_v2/detalle_pedido_NO_Stock.spl?ref_interna_item="
+linktest = "XXXXXX"
 # iterate through the records
 for i in range(len(cells)):
     # Fix No STOCK + new tab
