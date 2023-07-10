@@ -8,14 +8,14 @@ todayDate = ' ' + datetime.date.today().strftime("%d%m%Y")
 print('Today is:' + todayDate)
 
 # Paths and file names
-source_dir = '//app-301.huawei.com/DavWWWRoot/sites/amscsspain/spainlsp/Shared Documents/Inbound & Outbound MV files'
+source_dir = 'XXXXX'
 #dest_dir = os.path.normpath(os.path.expanduser("~/Desktop"))
-dest_dir = os.path.normpath("D:\Onebox\Spares\Spares Control")
-inboundFileName = "07 Inbound RICO.xlsx"
-outboundFileName = "06 Outbound RICO.xlsx"
+dest_dir = os.path.normpath("D:\XXXXX\Spares\XXXXX XXXXX")
+inboundFileName = "07 Inbound XXXXX.xlsx"
+outboundFileName = "06 Outbound XXXXX.xlsx"
 
 # Check if the Inbound/Outbound files are loaded OK by RICO in the sharepoint
-print('Checking if RICO has uploaded Inbound/Outbound files')
+print('Checking if XXXXX has uploaded Inbound/Outbound files')
 numberOfFiles = 2
 timeToWait = 60 # 1 minute
 maxChecks = 15 # 15 minutes
@@ -33,7 +33,7 @@ while True:
     passes = passes+1
 
     if checkFiles == numberOfFiles: #Check if all (2) files are loaded
-        print(f'{now_time} --> Inbound/Outbound files are OK loaded by RICO. Total loaded and checked: {checkFiles}/{numberOfFiles}. Continuing to copy files...')
+        print(f'{now_time} --> Inbound/Outbound files are OK loaded by XXXXX. Total loaded and checked: {checkFiles}/{numberOfFiles}. Continuing to copy files...')
         break
     print(f'{now_time} --> Not all the {numberOfFiles} Inbound/Outbound files are loaded in the sharepoint, total loaded for now: {checkFiles}. Wait {timeToWait/60} minutes for {passes}/{maxChecks} checks.')
     sendTelegram (f'{now_time} --> Not all the {numberOfFiles} Inbound/Outbound files are loaded in the sharepoint, total loaded for now: {checkFiles}.')
