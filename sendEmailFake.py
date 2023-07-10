@@ -16,7 +16,6 @@ formatter = logging.Formatter('%(asctime)s : %(levelname)s : %(name)s : %(messag
 file_handler = logging.FileHandler('logfile.log') #to send to file
 file_handler.setFormatter(formatter) #to send to file
 logger.addHandler(file_handler) #to send to file
-
 # Logs
 """
 logger.debug('Logger is ON')
